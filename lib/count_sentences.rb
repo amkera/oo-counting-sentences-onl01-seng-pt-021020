@@ -28,8 +28,8 @@ class String
     end
   end
 
-  def count_sentences(phrase)
-    split_array = phrase.split(/[.?!]/).reject {
+  def count_sentences
+    split_array = self.split(/[.?!]/).reject {
         |sentence| sentence.empty?
     }
 
