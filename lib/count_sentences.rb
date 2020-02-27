@@ -40,9 +40,4 @@ class String
     return split_array.length
   end
 
-count_sentences("Hello. Hi! What? Are you there?")
-
-
-
-
 end
