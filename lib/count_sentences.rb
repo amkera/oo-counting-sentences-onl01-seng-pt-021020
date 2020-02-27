@@ -28,7 +28,21 @@ class String
     end
   end
 
-  def count_sentences
-    split_array = self.split(/[.?!]/)
+  def count_sentences(phrase)
+    split_array = phrase.split(/[.?!]/).reject {
+        |sentence| sentence.empty?
+    }
+
+    #We split on any and all periods, question marks, and exclamation points using // 
+    #Then, we rejected all empty strings by iterating over every element in the split array and removing any/all empty strings. 
+
+
+    return split_array.length
   end
+
+count_sentences("Hello. Hi! What? Are you there?")
+
+
+
+
 end
